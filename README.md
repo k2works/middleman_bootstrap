@@ -151,6 +151,8 @@ MiddleManを使ってサイトの作成・更新が出来るようになる。
          </div>
         </div>
 
+![](img/001.png)
+
 # 参照 #
 
 [thomas-mcdonald / bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
