@@ -63,24 +63,33 @@ MiddleManを使ってサイトの作成・更新が出来るようになる。
 
         gem "bootstrap-sass", require: false
 
-+ css/main.css
++ css/bootstrap_loader.css.scss
 
-        /*
-        *= require bootstrap
-        */
+        @import "bootstrap";
+        @import "bootstrap/theme";
 
 + js/bootstrap.js
 
         // Loads all Bootstrap javascripts
-        //= require bootstrap
-
-+ js/vendorにbootstrap.min.jsをコピーする
-
+        //= require bootstrap/affix
+        //= require bootstrap/alert
+        //= require bootstrap/button
+        //= require bootstrap/carousel
+        //= require bootstrap/collapse
+        //= require bootstrap/dropdown
+        //= require bootstrap/tab
+        //= require bootstrap/transition
+        //= require bootstrap/scrollspy
+        //= require bootstrap/modal
+        //= require bootstrap/tooltip
+        //= require bootstrap/popover
 
 + layouts/layout.erb
 
+        <link rel="stylesheet" href="css/bootstrap_loader.css">        
+        ....
         <script src="js/main.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>          
+        <script src="js/bootstrap.js"></script>          
 
 ##  ページ作成 ##
 
@@ -157,3 +166,4 @@ MiddleManを使ってサイトの作成・更新が出来るようになる。
 
 [thomas-mcdonald / bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
 
+[README.md update to avoid "An @import loop has been found"](https://github.com/thomas-mcdonald/bootstrap-sass/issues/69)
